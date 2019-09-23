@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="list">
+   <body>
+      <table border = 1>
+         <thead>
+			<td>Date</td>
+            <td>Tag</td>
+            <td>NDE-V-VEL</td>
+            <td>NDE-H-VEL</td>
+            <td>NDE-H-ENV</td>
+			<td>NDE-H-ACC</td>
+			<td>DE-V-VEL</td>
+            <td>DE-H-VEL</td>
+            <td>DE-H-ENV</td>
+			<td>DE-H-ACC</td>
+			<td>Rekomendasi</td>
+         </thead>
+         
+         {% for vib in vibs %}
+            <tr>
+               <td>{{vib.date}}</td>
+			   <td>{{vib.tag}}</td>
+               <td>{{vib.nde_v_vel}}</td>
+               <td>{{vib.nde_h_vel}}</td>
+               <td>{{vib.nde_h_env}}</td>
+			   <td>{{vib.nde_h_acc}}</td>
+			   <td>{{vib.de_v_vel}}</td>
+			   <td>{{vib.de_h_vel}}</td>
+			   <td>{{vib.de_h_env}}</td>
+			   <td>{{vib.de_h_acc}}</td>
+			   <td>{{vib.rekom}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+   </body>
+</div>
+{% endblock %}
