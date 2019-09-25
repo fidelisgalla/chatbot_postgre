@@ -10,10 +10,12 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from vibra import pie_chart
 from sqlalchemy import desc
+from flask_heroku import Heroku
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:1807fidel@localhost/vib2"
+heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 class Vibration(db.Model): 
