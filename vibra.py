@@ -12,7 +12,8 @@ import pandas as pd
 import re
 from sqlalchemy import create_engine
 
-engine = create_engine('postgresql://postgres:1807fidel@localhost:5432/vib2')
+DATABASE_URL = 'postgres://jzjiblrwsoxiqa:5960f609af6b9f98035a0ae36df9c04ca3745cba8e75bacdf6afd3210711b8d8@ec2-54-83-55-122.compute-1.amazonaws.com:5432/d1j0qdp9aik676'
+engine = create_engine(DATABASE_URL)
 
 
 def pie_chart():
