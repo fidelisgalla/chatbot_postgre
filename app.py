@@ -14,7 +14,7 @@ from flask_heroku import Heroku
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:1807fidel@localhost/vib2"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://hxpqklnwcfinqd:8f0aeabc68d6ae00864c7c448b1cba005cd14f4ee1a5a711f158144251afe67f@ec2-23-21-94-99.compute-1.amazonaws.com:5432/d4k36vd5j1fhqv"
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 
