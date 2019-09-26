@@ -11,10 +11,11 @@ from datetime import datetime
 from vibra import pie_chart
 from sqlalchemy import desc
 from flask_heroku import Heroku
+import os
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://hxpqklnwcfinqd:8f0aeabc68d6ae00864c7c448b1cba005cd14f4ee1a5a711f158144251afe67f@ec2-23-21-94-99.compute-1.amazonaws.com:5432/d4k36vd5j1fhqv"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 
